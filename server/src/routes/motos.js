@@ -1,11 +1,11 @@
 const {Router} = require("express")
 const router = Router()
 
-router.route("/api/autos")
+router.route("/api/motos")
     .get()
     .post()
 
-router.route("/api/autos/:id")
+router.route("/api/motos/:id")
     .delete()
 
 module.exports = router

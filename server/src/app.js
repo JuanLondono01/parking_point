@@ -11,9 +11,9 @@ app.use(express.json())
 app.use(cors())
 
 // routes
-app.use("/", (req, res)=>{
-    res.send("Ruta base")
-})
+app.use(require("./routes/autos"))
+app.use(require("./routes/motos"))
+app.use(require("./routes/v.pesados"))
 
 
 module.exports = app
