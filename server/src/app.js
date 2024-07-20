@@ -11,9 +11,9 @@ app.use(express.json())
 app.use(cors())
 
 // routes
-app.use(require("./routes/autos"))
-app.use(require("./routes/motos"))
-app.use(require("./routes/v.pesados"))
+app.use(require("./routes/cars"))
+app.use(require("./routes/bikes"))
+app.use(require("./routes/heavy"))
 
 
 module.exports = app
