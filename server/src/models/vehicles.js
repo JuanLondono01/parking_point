@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-vehiclesSchema.pre('save', adjustDateToColombia);
 
 const vehiclesSchema = mongoose.Schema({
     date: {
@@ -24,6 +23,9 @@ const vehiclesSchema = mongoose.Schema({
         required: true,
     },
 });
+
+vehiclesSchema.pre('save', adjustDateToColombia);
+
 
 const Vehicles = mongoose.model('Vehicles', vehiclesSchema);
 
