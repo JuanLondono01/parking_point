@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const adjustDateToColombia = require('../middlewares/adjustDate');
 
 const vehiclesSchema = mongoose.Schema({
     date: {
@@ -23,6 +24,9 @@ const vehiclesSchema = mongoose.Schema({
         required: true,
     },
 });
+
+vehiclesSchema.pre('save', adjustDateToColombia);
+
 
 const Vehicles = mongoose.model('Vehicles', vehiclesSchema);
 
