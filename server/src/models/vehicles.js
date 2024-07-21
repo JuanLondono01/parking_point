@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const adjustDateToColombia = require('../middlewares/adjustDate');
 
 const vehiclesSchema = mongoose.Schema({
     date: {
